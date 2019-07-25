@@ -3143,7 +3143,7 @@ class app_base_AppBase extends events["EventEmitter"] {
   // setProgressIndicator(pi) {
   //   this._pi = pi;
   // }
-}
+};
 
 /* harmony default export */ var app_base = (app_base_AppBase);
 // CONCATENATED MODULE: ./web/index.js
