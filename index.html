@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html data-theme="<%= args.theme %>">
+
+<head>
+  <title>Access</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+  <link href="https://unpkg.com/video.js@7.6.0/dist/video-js.min.css" rel="stylesheet">
+<link href="/hash/bundle.475d1bd16dd59213d624.css" rel="stylesheet"><script type="text/javascript" src="/hash/bundle.dce248629d4ee61ab319.js"></script></head>
+
+<body tabindex="-1">
+  <div role="progressbar" class="app-progress-bar  
+        mdc-linear-progress mdc-linear-progress--indeterminate mdc-linear-progress--closed">
+    <div class="mdc-linear-progress__buffering-dots"></div>
+    <div class="mdc-linear-progress__buffer"></div>
+    <div class="mdc-linear-progress__bar mdc-linear-progress__primary-bar">
+      <span class="mdc-linear-progress__bar-inner"></span>
+    </div>
+    <div class="mdc-linear-progress__bar mdc-linear-progress__secondary-bar">
+      <span class="mdc-linear-progress__bar-inner"></span>
+    </div>
+  </div>
+
+  <header class="navbar navbar--primary">
+    <button class="mdc-icon-button material-icons navbar__drawer-toggle navbar__icon-btn">menu</button>
+    <div class="navbar__brand">巳初科技</div>
+    <nav class="navbar__links">
+      <a href="#" class="mdc-button navbar__btn">主页</a>
+      <a href="#" class="mdc-button navbar__btn">解决方案</a>
+      <a href="#" class="mdc-button navbar__btn">团队</a>
+      <a href="#" class="mdc-button navbar__btn">ABOUT</a>
+    </nav>
+    
+  </header>
+
+  <aside class="drawer mdc-drawer mdc-drawer--modal" tabindex="-1">
+    <div class="drawer__content mdc-drawer__content">
+      <a class="mdc-button drawer__btn" href="#">主页</a>
+      <a class="mdc-button drawer__btn" href="#">解决方案</a>
+      <a class="mdc-button drawer__btn" href="#">团队</a>
+      <a class="mdc-button drawer__btn" href="#">ABOUT</a>
+    </div>
+  </aside>
+  <div class="mdc-drawer-scrim"></div>
+
+  <main id="view-container">
+    <!-- $VIEW_SLOT -->
+  </main>
+
+  <script src="https://unpkg.com/video.js@7.6.0/dist/video.min.js"></script>
+  <script>
+    window.HELP_IMPROVE_VIDEOJS = false;
+    window.app = new App({
+      theme: 'light',
+      innerStyle: `
+:root {
+  --mdc-theme-primary: #6200ee;
+  --mdc-theme-secondary: #018786;
+  --mdc-theme-background: white;
+  --mdc-theme-surface: white;
+  --mdc-theme-error: #b00020;
+  --mdc-theme-on-primary: white;
+  --mdc-theme-on-secondary: white;
+  --mdc-theme-on-background: black;
+  --mdc-theme-on-surface: black;
+  --mdc-theme-on-error: white;
+  --mdc-theme-contrast-background: rgb(246, 246, 246);
+  --mdc-theme-text-primary-on-light: rgba(0, 0, 0, .92);
+  --mdc-theme-text-secondary-on-light: rgba(0, 0, 0, .62);
+  --mdc-theme-text-hint-on-light: rgba(0, 0, 0, .38);
+  --mdc-theme-text-disabled-on-light: rgba(0, 0, 0, .38);
+  --mdc-theme-text-icon-on-light: rgba(0, 0, 0, .38);
+  --mdc-theme-text-primary-on-dark: white;
+  --mdc-theme-text-secondary-on-dark: rgba(255, 255, 255, .7);
+  --mdc-theme-text-hint-on-dark: rgba(255, 255, 255, .5);
+  --mdc-theme-text-disabled-on-dark: rgba(255, 255, 255, .5);
+  --mdc-theme-text-icon-on-dark: rgba(255, 255, 255, .5);
+}
+*[data-theme~="light"] {
+  --mdc-theme-primary: #eceff1;
+  --mdc-theme-background: white;
+  --mdc-theme-surface: white;
+  --mdc-theme-on-primary: black;
+  --mdc-theme-on-background: black;
+  --mdc-theme-contrast-background: rgb(242, 242, 242);
+  --mdc-theme-text-primary-on-background: var(--mdc-theme-text-primary-on-light);
+  --mdc-theme-text-secondary-on-background: var(--mdc-theme-text-secondary-on-light);
+  --mdc-theme-text-hint-on-background: var(--mdc-theme-text-hint-on-light);
+  --mdc-theme-text-disabled-on-background: var(--mdc-theme-text-disabled-on-light);
+  --mdc-theme-text-icon-on-background: var(--mdc-theme-text-icon-on-light);
+  --mdc-theme-text-primary-on-surface: var(--mdc-theme-text-primary-on-light);
+  --mdc-theme-text-secondary-on-surface: var(--mdc-theme-text-secondary-on-light);
+  --mdc-theme-text-hint-on-surface: var(--mdc-theme-text-hint-on-light);
+  --mdc-theme-text-disabled-on-surface: var(--mdc-theme-text-disabled-on-light);
+  --mdc-theme-text-icon-on-surface: var(--mdc-theme-text-icon-on-light);
+}
+*[data-theme~="dark"] {
+  --mdc-theme-primary: #c51162;
+  --mdc-theme-background: black;
+  --mdc-theme-surface: grey;
+  --mdc-theme-on-primary: white;
+  --mdc-theme-on-background: white;
+  --mdc-theme-contrast-background: rgb(32, 32, 32);
+  --mdc-theme-text-primary-on-background: var(--mdc-theme-text-primary-on-dark);
+  --mdc-theme-text-secondary-on-background: var(--mdc-theme-text-secondary-on-dark);
+  --mdc-theme-text-hint-on-background: var(--mdc-theme-text-hint-on-dark);
+  --mdc-theme-text-disabled-on-background: var(--mdc-theme-text-disabled-on-dark);
+  --mdc-theme-text-icon-on-background: var(--mdc-theme-text-icon-on-dark);
+  --mdc-theme-text-primary-on-surface: var(--mdc-theme-text-primary-on-dark);
+  --mdc-theme-text-secondary-on-surface: var(--mdc-theme-text-secondary-on-dark);
+  --mdc-theme-text-hint-on-surface: var(--mdc-theme-text-hint-on-dark);
+  --mdc-theme-text-disabled-on-surface: var(--mdc-theme-text-disabled-on-dark);
+  --mdc-theme-text-icon-on-surface: var(--mdc-theme-text-icon-on-dark);
+}
+*[data-theme~="dark-on-light"] {
+  --mdc-theme-background: #616161;
+}`,
+    });
+
+  </script>
+</body>
+
+</html>
