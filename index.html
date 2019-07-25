@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html data-theme="<%= args.theme %>">
+<html data-theme="light">
 
 <head>
   <title>Access</title>
@@ -23,7 +23,7 @@
 
   <header class="navbar navbar--primary">
     <button class="mdc-icon-button material-icons navbar__drawer-toggle navbar__icon-btn">menu</button>
-    <div class="navbar__brand">巳初科技</div>
+    <div class="navbar__brand">Noddle</div>
     <nav class="navbar__links">
       <a href="#" class="mdc-button navbar__btn">主页</a>
       <a href="#" class="mdc-button navbar__btn">解决方案</a>
@@ -44,7 +44,342 @@
   <div class="mdc-drawer-scrim"></div>
 
   <main id="view-container">
-    <!-- $VIEW_SLOT -->
+    <div class="floating">
+      <!-- <video class="floating__background" loop="loop" autoplay="autoplay" preload="auto" data-contentid="2462414099">
+        <source src="https://cdn2.unrealengine.com/Unreal+Engine%2FueOverview%2FTopCarousel%2FENGN_AboutPAgeVideo_6MB_MP4-fd8dd00623d57129402d03d3cd9d2bad1a996b5a.mp4">
+        <source src="https://cdn2.unrealengine.com/Unreal+Engine%2FueOverview%2FTopCarousel%2FENGN_AboutPAgeVideo_V2C_WebM_VP8-44a44fd277a7f2ec014f7457cf46365bc42a9c0d.webm">
+          Your browser does not support HTML5 video.
+      </video> -->
+      <!-- <video class="floating__background" loop="" preload="auto" muted="" autoplay="" data-contentid="4190363191">
+        <source src="https://cdn2.unrealengine.com/Unreal+Engine%2FFeatures%2F2019_ENGN_GDC_FeaturesSizzle_vFINAL-3.25.19--WebM-48c1dd198a46c222599a0784fdef9234f21b1798.webm">
+          Your browser does not support HTML5 video.
+      </video> -->
+      <img class="floating__background" src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/d8d2aa72166131.5bde5b5e54b97.jpg" style="filter: brightness(80%);" />
+      <div class="billboard floating__content" data-theme="dark">
+        <span class="billboard__title mdc-typography--headline3">嗨，别来无恙</span>
+        <!-- <span style="padding: 30px 0px;"></span> -->
+      </div>
+    </div>
+    
+    <div class="card-scaffold mdc-elevation--z0" style="
+      height: 240px; 
+      position: relative; 
+      text-align: center;
+      padding: 0 16px;
+      display: flex;
+      justify-content: center;
+      flex-flow: column nowrap;
+      align-items: center;
+      ">
+      <div>
+        <h1 class="mdc-typography--headline5">Noddle（奴歌）科技，一家拥抱业务和人际关系的互联网服务者</h1>
+        <h4 class="mdc-typography--subtitle1 mdc-theme--text-secondary-on-background">我们是一群顶尖的开发者但从不止步于开发，我们在人、产品、市场、商业中寻找并建立连接，面向社会、消费者和用户而思考。</h4>
+      </div>
+    </div>
+    
+    <div class="mdc-theme--background">
+      <div class="card-grid">
+        <div class="card-grid__title">
+          我们能做什么
+        </div>
+        <div class="mdc-layout-grid">
+          <div class="mdc-layout-grid__inner">
+    
+            <div class="card 
+              mdc-layout-grid__cell
+              mdc-layout-grid__cell--span-12-xs
+              mdc-layout-grid__cell--span-6-sm
+              mdc-layout-grid__cell--span-4-md
+              mdc-layout-grid__cell--span-3-lg
+              mdc-layout-grid__cell--span-4-xl">
+              <a href="#" class="card__header floating">
+                <!-- <video class="floating__background" loop="loop" autoplay="autoplay" preload="auto" data-contentid="2462414099">
+                  <source
+                    src="https://cdn2.unrealengine.com/Unreal+Engine%2FueOverview%2FTopCarousel%2FENGN_AboutPAgeVideo_6MB_MP4-fd8dd00623d57129402d03d3cd9d2bad1a996b5a.mp4">
+                  <source
+                    src="https://cdn2.unrealengine.com/Unreal+Engine%2FueOverview%2FTopCarousel%2FENGN_AboutPAgeVideo_V2C_WebM_VP8-44a44fd277a7f2ec014f7457cf46365bc42a9c0d.webm">
+                  Your browser does not support HTML5 video.
+                </video> -->
+                <img class="floating__background" src="/assets/VR.jpg" />
+              </a>
+              <div class="card__content">
+                <div class="card__primary-text">
+                  虚拟现实
+                </div>
+                <div class="card__secondary-text">
+                  以概念设计、规划、效果展示为目的设计的虚拟场景和交互，并应用在房地产、教育、医疗、营销等行业。
+                </div>
+              </div>
+            </div>
+    
+            <div class="card 
+              mdc-layout-grid__cell
+              mdc-layout-grid__cell--span-12-xs
+              mdc-layout-grid__cell--span-6-sm
+              mdc-layout-grid__cell--span-4-md
+              mdc-layout-grid__cell--span-3-lg
+              mdc-layout-grid__cell--span-4-xl">
+              <a href="#" class="card__header floating">
+                <img class="floating__background" 
+                  src="/assets/biz.jpg" />
+              </a>
+              <div class="card__content">
+                <div class="card__primary-text">
+                  企业级应用软件
+                </div>
+                <div class="card__secondary-text">
+                  从宏观到微观，为您全局架构适应二十一世纪的最新解决方案，以体系化、模块化拆分和实现您的需求，并运行在不同的设备（手机，PC，平板电脑，WEB）与不同的操作系统上。
+                </div>
+              </div>
+            </div>
+    
+            <div class="card 
+              mdc-layout-grid__cell
+              mdc-layout-grid__cell--span-12-xs
+              mdc-layout-grid__cell--span-6-sm
+              mdc-layout-grid__cell--span-4-md
+              mdc-layout-grid__cell--span-3-lg
+              mdc-layout-grid__cell--span-4-xl">
+              <a href="#" class="card__header floating">
+                <img class="floating__background"
+                  src="/assets/workwith.jpg" />
+              </a>
+              <div class="card__content">
+                <div class="card__primary-text">
+                  产品核心技术托付
+                </div>
+                <div class="card__secondary-text">
+                  我们以多年来对互联网行业、产品、设计、交付、测试的深刻理解，完全承载您业务的技术部分，与您开展深度密切的技术合作关系，让技术和产品不会成为掣肘您前进的障碍。
+                </div>
+              </div>
+            </div>
+    
+            <div class="card 
+              mdc-layout-grid__cell
+              mdc-layout-grid__cell--span-12-xs
+              mdc-layout-grid__cell--span-6-sm
+              mdc-layout-grid__cell--span-4-md
+              mdc-layout-grid__cell--span-3-lg
+              mdc-layout-grid__cell--span-4-xl">
+              <a href="#" class="card__header floating">
+                <img class="floating__background"
+                  src="/assets/cloud.jpg" />
+              </a>
+              <div class="card__content">
+                <div class="card__primary-text">
+                  向互联网或云计算转型
+                </div>
+                <div class="card__secondary-text">
+                  实体行业或非互联网行业向互联网方向转型，我们向您提供专业的咨询服务，为您注入互联网基因。
+                </div>
+              </div>
+            </div>
+    
+            <div class="card 
+              mdc-layout-grid__cell
+              mdc-layout-grid__cell--span-12-xs
+              mdc-layout-grid__cell--span-6-sm
+              mdc-layout-grid__cell--span-4-md
+              mdc-layout-grid__cell--span-3-lg
+              mdc-layout-grid__cell--span-4-xl">
+              <a href="#" class="card__header floating">
+                <img class="floating__background"
+                  src="/assets/phone_prod.gif" />
+              </a>
+              <div class="card__content">
+                <div class="card__primary-text">
+                  终端产品
+                </div>
+                <div class="card__secondary-text">
+                  我们直接制作面向消费者和终端用户的重量级产品（打车、LBS团购、社交、电商等），我们尤其重视产品交互设计、负载均衡等。
+                </div>
+              </div>
+            </div>
+    
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="floating" >
+      <!-- <video class="floating__background" loop="loop" autoplay="autoplay" preload="auto" data-contentid="2462414099">
+        <source src="https://cdn2.unrealengine.com/Unreal+Engine%2FueOverview%2FTopCarousel%2FENGN_AboutPAgeVideo_6MB_MP4-fd8dd00623d57129402d03d3cd9d2bad1a996b5a.mp4">
+        <source src="https://cdn2.unrealengine.com/Unreal+Engine%2FueOverview%2FTopCarousel%2FENGN_AboutPAgeVideo_V2C_WebM_VP8-44a44fd277a7f2ec014f7457cf46365bc42a9c0d.webm">
+          Your browser does not support HTML5 video.
+      </video> -->
+      <img class="floating__background" src="/assets/netmeeting.jpg" style="filter: brightness(50%);" />
+      
+      <div class="billboard floating__content" data-theme="dark">
+        <span class="billboard__title mdc-typography--headline3" >敏捷方法</span>
+        <span style="height:16px;"></span>
+        <span class="billboard__subtitle">我们使用敏捷方法进行开发和迭代，这意味着与客户更多的沟通、参与、交付，并且我们拥抱改变</span>
+        <!-- <span style="padding: 30px 0px;"></span> -->
+      </div>
+    </div>
+    
+    <div class="card-grid" style="margin-top: 8.5vh; margin-bottom: 8.5vh;">
+      <div>
+        <div class="title" >
+          视觉
+        </div>
+        <div style="height:16px;"></div>
+        <div style="text-align: center; margin-bottom: 32px;" class="subtitle">
+          产品将使用"Material Design"设计语言创造一流设计
+        </div>
+      </div>
+      
+      <div class="mdc-layout-grid">
+        <div class="mdc-layout-grid__inner">
+      
+          <div class="
+            mdc-layout-grid__cell 
+            mdc-layout-grid__cell--span-12-xs
+            mdc-layout-grid__cell--span-12-sm
+            mdc-layout-grid__cell--span-12-md
+            mdc-layout-grid__cell--span-8-lg
+            mdc-layout-grid__cell--span-8-xl">
+            <div class="vdo">
+              <div class="floating floating--16-9">
+                <div class="card-form floating__background" style="overflow: hidden;">
+                  <video id='my-video' class='video-js' controls="true" preload='auto' style="width: 100%; height: 100%;"
+                    poster='/assets/MD_Moment.jpg' data-setup='{}'>
+                    <source src='/assets/MD.mp4' type='video/mp4'>
+                    <p class='vjs-no-js'>
+                      To view this video please enable JavaScript, and consider upgrading to a web browser that
+                      <a href='https://videojs.com/html5-video-support/' target='_blank'>supports HTML5 video</a>
+                    </p>
+                  </video>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <div class="vdo-extimg-div
+            mdc-layout-grid__cell 
+            mdc-layout-grid__cell--span-12-xs
+            mdc-layout-grid__cell--span-12-sm
+            mdc-layout-grid__cell--span-12-md
+            mdc-layout-grid__cell--span-4-lg
+            mdc-layout-grid__cell--span-4-xl">
+            <img src="/assets/gmaterial.jpg" />
+            <img src="/assets/google_material-design16-9.jpg" />
+            
+          </div>
+      
+        </div>
+      </div>
+    </div>
+    
+    <!-- <div class="mdc-theme--background" data-theme="dark dark-on-light"> -->
+    <div class="contrast-bg">
+        
+      <div class="card-grid" style="margin-top: 8.5vh; margin-bottom: 8.5vh;">
+        <div>
+          <div class="title" style="margin-bottom: 38px;">
+            建立联系
+          </div>
+          <!-- <div style="height:16px;"></div>
+          <div style="text-align: center; margin-bottom: 32px;" class="subtitle">
+            建立沟通是共赢的第一步
+          </div> -->
+        </div>
+        <div class="mdc-layout-grid">
+          <div class="mdc-layout-grid__inner">
+    
+            <!-- <div class="
+              mdc-layout-grid__cell 
+              mdc-layout-grid__cell--span-12-xs
+              mdc-layout-grid__cell--span-12-sm
+              mdc-layout-grid__cell--span-12-md
+              mdc-layout-grid__cell--span-8-lg
+              mdc-layout-grid__cell--span-8-xl">
+              <h1 class="mdc-typography--headline4">从现在开始与我们建立沟通</h1>
+              <h2 class="mdc-typography--subtitle1 mdc-theme--text-secondary-on-background">建立沟通是共赢的第一步</h2>
+            </div> -->
+    
+            <div class="
+              mdc-layout-grid__cell 
+              mdc-layout-grid__cell--span-6-xs
+              mdc-layout-grid__cell--span-6-sm
+              mdc-layout-grid__cell--span-6-md
+              mdc-layout-grid__cell--span-3-lg
+              mdc-layout-grid__cell--span-3-xl"
+              style="
+              text-align: left;
+              display: flex;
+              justify-content: flex-start;
+              align-items: center;
+              flex-flow: column nowrap;">
+              <span class="mdc-typography--headline5">咨询</span>
+              <span style="height: 12px;"></span>
+              <span class="mdc-typography--body1 mdc-theme--text-secondary-on-background">尝试对想法进行初步交谈是一个好的开始，我们乐意帮助任何有理想的人或组织。</span>
+            </div>
+    
+            <div class="
+              mdc-layout-grid__cell 
+              mdc-layout-grid__cell--span-6-xs
+              mdc-layout-grid__cell--span-6-sm
+              mdc-layout-grid__cell--span-6-md
+              mdc-layout-grid__cell--span-3-lg
+              mdc-layout-grid__cell--span-3-xl"
+              style="
+              text-align: left;
+              display: flex;
+              justify-content: flex-start;
+              align-items: center;
+              flex-flow: column nowrap;">
+              <span class="mdc-typography--headline5">市场合作</span>
+              <span style="height: 12px;"></span>
+              <span class="mdc-typography--body1 mdc-theme--text-secondary-on-background">时段</span>
+            </div>
+    
+            <div class="
+              mdc-layout-grid__cell 
+              mdc-layout-grid__cell--span-6-xs
+              mdc-layout-grid__cell--span-6-sm
+              mdc-layout-grid__cell--span-6-md
+              mdc-layout-grid__cell--span-3-lg
+              mdc-layout-grid__cell--span-3-xl"
+              style="
+              text-align: left;
+              display: flex;
+              justify-content: flex-start;
+              align-items: center;
+              flex-flow: column nowrap;">
+              <span class="mdc-typography--headline5">人脉</span>
+              <span style="height: 12px;"></span>
+              <span class="mdc-typography--body1 mdc-theme--text-secondary-on-background">论语中说：有朋自远方来，不亦乐乎</span>
+            </div>
+    
+    
+            <div class="
+              mdc-layout-grid__cell 
+              mdc-layout-grid__cell--span-6-xs
+              mdc-layout-grid__cell--span-6-sm
+              mdc-layout-grid__cell--span-6-md
+              mdc-layout-grid__cell--span-3-lg
+              mdc-layout-grid__cell--span-3-xl" 
+              style="
+              text-align: left;
+              display: flex;
+              justify-content: flex-start;
+              align-items: center;
+              flex-flow: column nowrap;">
+              <img src="/assets/VR.jpg" style="width: 140px; height: 140px; object-fit: cover; border-radius: 50%;" />
+              <span style="height: 16px;"></span>
+              <span class="mdc-typography--headline5">市场合伙</span>
+            </div>
+    
+    
+    
+            
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
   </main>
 
   <script src="https://unpkg.com/video.js@7.6.0/dist/video.min.js"></script>
