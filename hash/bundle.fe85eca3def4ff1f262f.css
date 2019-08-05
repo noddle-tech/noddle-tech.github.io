@@ -3395,11 +3395,9 @@ main {
   color: var(--mdc-theme-text-secondary-on-background, black); }
 
 .vdo {
-  width: 100%; }
-  .vdo .vjs-poster {
-    background-color: rgba(0, 0, 0, 0); }
-  .vdo .video-js {
-    background-color: rgba(0, 0, 0, 0); }
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto; }
 
 .vdo-extimg-div {
   display: flex;
@@ -3412,7 +3410,8 @@ main {
     width: 100%;
     height: 48%;
     -o-object-fit: cover;
-       object-fit: cover; }
+       object-fit: cover;
+    overflow: hidden; }
   @media (max-width: 1067px) {
     .vdo-extimg-div {
       flex-direction: row; }
