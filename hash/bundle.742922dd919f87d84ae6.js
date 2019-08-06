@@ -3022,13 +3022,13 @@ class app_base_AppBase extends events["EventEmitter"] {
     this._progressbar_refcount = 0;
     
     const app = this;
-    window.onpopstate = function (e) {
-      app._navigate(location.href, err => {
-        if (typeof err != 'undefined') {
-          alert(err.toString());
-        }
-      });
-    };
+    // window.onpopstate = function (e) {
+    //   app._navigate(location.href, err => {
+    //     if (typeof err != 'undefined') {
+    //       alert(err.toString());
+    //     }
+    //   });
+    // };
     
     if (typeof opts.innerStyle == 'string') {
       const el = document.createElement("style");
@@ -3036,17 +3036,17 @@ class app_base_AppBase extends events["EventEmitter"] {
       el.textContent = opts.innerStyle;
       document.head.appendChild(el);
     }
-
-    // const theme = document.getAttribute('data-theme');
-    // if (typeof theme == 'string') {
-    //   this._theme = theme.trim().split(' ')[0]; // 'light' or 'dark'
-    // }
-    // if (this._theme !== 'light' && this._theme !== 'dark') {
-    //   throw new Error('invalid data-theme attr');
-    // }
+    
+    const theme = document.documentElement.getAttribute('data-theme');
+    if (typeof theme == 'string') {
+      this._theme = theme.trim().split(' ')[0]; // 'light' or 'dark'
+    }
+    if (this._theme !== 'light' && this._theme !== 'dark') {
+      throw new Error('invalid data-theme attr');
+    }
     this._theme = opts.theme;
 
-    this._viewContainer = document.getElementById('view-container');
+    //this._viewContainer = document.getElementById('view-container');
   }
 
   showProgressBar() {
@@ -3065,57 +3065,57 @@ class app_base_AppBase extends events["EventEmitter"] {
     }
   }
 
-  navigate(p) {
-    const app = this;
-    const nav = originUrl => {
-      app._navigate(originUrl, function (err) {
-        if (typeof err != 'undefined') {
-          alert(err.toString());
-        } else {
-          history.pushState(null, null, originUrl);
-        }
-      });
-    };
-    if (p instanceof HTMLAnchorElement) {
-      try {
-        nav(p.href);
-      } finally {
-        return false;
-      }
-    } else if (typeof(p) === 'string') {
-      if (p.startsWith('/')) {
-        p = location.origin + p;
-      }
-      nav(p);
-    }
-  }
+  // navigate(p) {
+  //   const app = this;
+  //   const nav = originUrl => {
+  //     app._navigate(originUrl, function (err) {
+  //       if (typeof err != 'undefined') {
+  //         alert(err.toString());
+  //       } else {
+  //         history.pushState(null, null, originUrl);
+  //       }
+  //     });
+  //   };
+  //   if (p instanceof HTMLAnchorElement) {
+  //     try {
+  //       nav(p.href);
+  //     } finally {
+  //       return false;
+  //     }
+  //   } else if (typeof(p) === 'string') {
+  //     if (p.startsWith('/')) {
+  //       p = location.origin + p;
+  //     }
+  //     nav(p);
+  //   }
+  // }
 
-  _navigate(originUrl, cb) {
-    const url = new URL(originUrl);
-    url.searchParams.append('ret', 'view');
-    const app = this;
-    app.showProgressBar();
-    fetch(url.href)
-      .then(res => {
-        if (res.ok) {
-          return res.text().then(data => {
-            app._viewContainer.innerHTML = data;
-          });
-        } else {
-          return res.text().then(
-            msg => Promise.reject(msg));
-        }
-      })
-      .then(() => {
-        app.hideProgressBar();
-        if (cb)
-          cb();
-      }, err => {
-        app.hideProgressBar();
-        if (cb)
-          cb(err.toString());
-      });
-  }
+  // _navigate(originUrl, cb) {
+  //   const url = new URL(originUrl);
+  //   url.searchParams.append('ret', 'view');
+  //   const app = this;
+  //   app.showProgressBar();
+  //   fetch(url.href)
+  //     .then(res => {
+  //       if (res.ok) {
+  //         return res.text().then(data => {
+  //           app._viewContainer.innerHTML = data;
+  //         });
+  //       } else {
+  //         return res.text().then(
+  //           msg => Promise.reject(msg));
+  //       }
+  //     })
+  //     .then(() => {
+  //       app.hideProgressBar();
+  //       if (cb)
+  //         cb();
+  //     }, err => {
+  //       app.hideProgressBar();
+  //       if (cb)
+  //         cb(err.toString());
+  //     });
+  // }
 
   get theme() {
     return this._theme;
